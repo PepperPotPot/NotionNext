@@ -258,7 +258,7 @@ const ExternalPlugin = props => {
       <GlobalStyle />
       {ENABLE_ICON_FONT && <IconFont />}
       {MOUSE_FOLLOW && <MouseFollow />}
-      {pluginsIdle && THEME_SWITCH && typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('menu') && <ThemeSwitch />}
+      {/* 主题悬浮面板已全局关闭：任何访客（含站长）都不显示 */}
       {DEBUG && <DebugPanel />}
       {ANALYTICS_ACKEE_TRACKER && <Ackee />}
       {ANALYTICS_GOOGLE_ID && <Gtag />}
