@@ -278,7 +278,7 @@ export const MobileNav = (props) => {
                   handleEmailClick(e, emailIcon, CONTACT_EMAIL)
                 }
                 title='email'
-                className='flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-[var(--endspace-bg-secondary)] text-[var(--endspace-text-muted)] transition-colors hover:bg-[#d4d4d8] hover:text-[var(--endspace-text-primary)]'
+                className='flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-[var(--endspace-bg-secondary)] text-[var(--endspace-text-muted)] transition-colors hover:bg-[var(--endspace-accent-yellow)] hover:text-[var(--endspace-text-primary)]'
                 ref={emailIcon}>
                 <MailFillIcon size={16} />
               </a>
@@ -293,7 +293,7 @@ export const MobileNav = (props) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={social.label}
-                  className="w-9 h-9 flex items-center justify-center rounded-full bg-[var(--endspace-bg-secondary)] text-[var(--endspace-text-muted)] hover:text-[var(--endspace-text-primary)] hover:bg-[#d4d4d8] transition-colors"
+                  className="w-9 h-9 flex items-center justify-center rounded-full bg-[var(--endspace-bg-secondary)] text-[var(--endspace-text-muted)] hover:text-[var(--endspace-text-primary)] hover:bg-[var(--endspace-accent-yellow)] transition-colors"
                 >
                   {renderSocialIcon(social.key, social.svg, social.label)}
                 </a>
