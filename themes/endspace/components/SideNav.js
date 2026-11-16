@@ -188,11 +188,11 @@ export const SideNav = (props) => {
       {/* Fixed height container to prevent layout shift when expanded */}
       <div className="flex-shrink-0 min-h-[10rem] py-6 flex flex-col items-center transition-all duration-300">
         <SmartLink href="/" title="Home">
-          <div className={`flex-shrink-0 cursor-pointer transition-all duration-300 ease-in-out ${isHovered ? 'w-[6rem] h-[6rem]' : 'w-[4rem] h-[4rem]'}`}>
+          <div className={`flex-shrink-0 cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 ${isHovered ? 'w-[6rem] h-[6rem]' : 'w-[4rem] h-[4rem]'}`}>
             <img 
               src={avatarUrl}
               alt="Avatar"
-              className="w-full h-full object-contain"
+              className="w-full h-full rounded-full object-cover shadow-lg transition-colors"
             />
           </div>
         </SmartLink>
