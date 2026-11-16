@@ -991,7 +991,7 @@ export const Style = () => {
       /* Active State: Always full width with Distinct Color */
       .nier-nav-item.active::before {
         width: 100%;
-        background: #EBEBEB; /* Active: Lighter Grey */
+        background: var(--endspace-accent-yellow) !important; /* Active: 常亮黄色 */
       }
 
       /* Target the icon specifically if needed to ensure color fill */
