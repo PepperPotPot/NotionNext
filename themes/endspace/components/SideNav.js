@@ -186,9 +186,9 @@ export const SideNav = (props) => {
     >
       {/* Avatar Section - Top of sidebar, clickable to personal page */}
       {/* Fixed height container to prevent layout shift when expanded */}
-      <div className="flex-shrink-0 h-[10rem] py-6 flex flex-col items-center">
+      <div className="flex-shrink-0 min-h-[10rem] py-6 flex flex-col items-center transition-all duration-300">
         <SmartLink href="/" title="Home">
-          <div className="w-[3rem] h-[3rem] flex-shrink-0 transition-transform duration-300 cursor-pointer hover:scale-105">
+          <div className={`flex-shrink-0 cursor-pointer transition-all duration-300 ease-in-out hover:scale-105 ${isHovered ? 'w-[5.5rem] h-[5.5rem]' : 'w-[3rem] h-[3rem]'}`}>
             <img 
               src={avatarUrl}
               alt="Avatar"
@@ -198,7 +198,7 @@ export const SideNav = (props) => {
         </SmartLink>
         {/* Author Info - shown when expanded, fills the reserved space below avatar */}
         <div className={`mt-3 text-center transition-all duration-300 overflow-hidden ${isHovered ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0'}`}>
-          <div className="text-xs text-[var(--endspace-text-muted)] mt-1 px-3 line-clamp-3 leading-relaxed">
+          <div className="text-sm text-[var(--endspace-text-muted)] mt-1 px-4 line-clamp-3 leading-relaxed">
             {siteConfig('BIO') || ''}
           </div>
         </div>
