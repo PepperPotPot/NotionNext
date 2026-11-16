@@ -222,7 +222,7 @@ export const SideNav = (props) => {
           const itemContent = (
             <div
               ref={el => itemRefs.current[item.name] = el}
-              className={`nier-nav-item relative h-[3rem] flex items-center cursor-pointer group transition-colors duration-300 hover:bg-[#d4d4d8] ${isActive ? 'active bg-[#d4d4d8]' : ''}`}
+              className={`nier-nav-item relative h-[3rem] flex items-center cursor-pointer group transition-colors duration-300 hover:bg-[var(--endspace-accent-yellow)] ${isActive ? 'active bg-[var(--endspace-accent-yellow)]' : ''}`}
               onClick={hasSubMenu ? toggleSubMenu : undefined}
               role={hasSubMenu ? 'button' : undefined}
               tabIndex={hasSubMenu ? 0 : undefined}
