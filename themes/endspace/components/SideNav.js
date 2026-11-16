@@ -215,7 +215,7 @@ export const SideNav = (props) => {
         
         {menuItems.map((item) => {
           const isActive = activeTab === item.name
-          const hasSubMenu = item.subMenus?.length > 0
+          const hasSubMenu = item.subMenus?.length > 0 && item.path !== '/
           const isOpen = openSubMenuId === item.id
           const toggleSubMenu = () => setOpenSubMenuId(isOpen ? null : item.id)
 
