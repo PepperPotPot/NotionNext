@@ -28,10 +28,18 @@ const normalizeIcon = link => {
 }
 
 const normalizeHref = link => {
-  const value = link?.href || link?.path || link?.url || link?.slug || ''
+  const raw = link?.href || link?.path || link?.url || link?.slug || ''
+  const value = String(raw).trim()
   if (!value) return ''
+  // 首页：不管 Notion 里 slug 写成什么，一律指向站点根
+  const label = link?.name || link?.title || link?.label || ''
+  if (/^(home|首页)$/i.test(label)) return '/'
   if (value.startsWith('/') || value.startsWith('http') || value.startsWith('#')) {
     return value
+  }
+  // 裸域名（如 rogueselflib.org / www.xxx.com/path）：按外链处理，避免变成 /rogueselflib.org
+  if (/^[a-z0-9-]+(\.[a-z0-9-]+)+(\/.*)?$/i.test(value)) {
+    return `https://${value}`
   }
   return `/${value}`
 }
